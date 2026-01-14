@@ -1,0 +1,13 @@
+ .thumbnails img{height:132px}
+ .highlightedThumbnail{padding:0px; border:5px solid black}
+ .highlightedThumbnail img{height:162px;}
+ .mainPicture{text-align:center; vertical-align:middle}
+ .imgContainer{width:936px; height:702px; position: relative}
+ .imgContainer img{max-width:100%; max-height:100%; width: auto; height: auto; margin: auto; position:absolute; bottom: 0; left: 0; right: 0}
+ .thumbnails{margin-left:60px}
+ .thumbnails td{paddding: 5px}
+ .hiddenImageSlot{height:132px; width:176px; visibility:hidden}
+ .captionContainer{margin:20px 20px 100px 20px; max-width:896px; height: 10px}
+ .arrow{padding:0px 10px}
+ #supplementalBackLink{visibility:hidden; font-size: smaller}   
+ 
