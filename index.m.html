@@ -1,0 +1,275 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+<!-- meta name="GENERATOR" content="Mozilla/4.7 [en] (Win95; U) [Netscape]" -->
+
+<title>shabsin.com - My Public Pages</title>
+
+<link rel="stylesheet" href="css/rsstyles.css">
+
+<style>
+.clockdate-wrapper {
+    background-color: #333;
+    padding:5px;
+    max-width:300px;
+    width:100%;
+    text-align:center;
+    border-radius:5px;
+    margin:0 auto;
+    margin-top:2%;
+}
+#clock{
+    background-color:#333;
+    font-family: sans-serif;
+    font-size:40px;
+    text-shadow:0px 0px 1px #fff;
+    color:#fff;
+}
+#clock span {  
+    color:#aaa;
+    text-shadow:0px 0px 1px #333;
+    font-size:16px;
+    position:relative;
+    top:0px;
+    left:3px;
+}
+#date {
+    letter-spacing:1px;
+    font-size:12px;
+    font-family:arial,sans-serif;
+    color:#fff;
+}
+
+</style>
+
+<script type=text/javascript>
+  
+function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    hr = (hr == 0) ? 12 : hr;
+    hr = (hr > 12) ? hr - 12 : hr;
+    //Add a zero in front of numbers<10
+//    hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + " : " + min + " : " + sec + " " + ap;
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    hr = (hr == 0) ? 12 : hr;
+    hr = (hr > 12) ? hr - 12 : hr;
+    //Add a zero in front of numbers<10
+//    hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+    
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var curWeekDay = days[today.getDay()];
+    var curDay = today.getDate();
+    var curMonth = months[today.getMonth()];
+    var curYear = today.getFullYear();
+    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+    document.getElementById("date").innerHTML = date;
+    
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+</script>
+
+<!-- script src="nmenus1.js"></script>
+<script src="mmenu.js"></script -->
+  
+<base target=_top>
+
+</head>
+
+<body onload="startTime(); ">
+
+<table align=center>
+  <tr>
+    <td><font size=+5 face="Helvetica,Futura" color=#00008b>&nbsp;<i>shabsin.com - Rick's Public Pages</i></font>
+    </td>
+  </tr>
+
+  <tr>
+    <td valign=top>
+      <table cellpadding=0 cellspacing=0 border=0>
+        <tr>
+          <td>  
+            <table width=1000 cellspacing=0 cellpadding=0 border=0> <!-- was 790  before change to tab width in nmenus1.js from 106 to 95 --> 
+              <tr>
+                <td bgcolor=#dcdcdc width=2 height=2></td>
+                <td bgcolor=#dcdcdc width=12 height=2></td>
+                <td bgcolor=#dcdcdc height=2></td>  <!-- changes made here to eliminate the gray dropdown menu background (&nbsp; removed) -->
+                <td bgcolor=#dcdcdc width=12 height=2></td>
+                <td bgcolor=#dcdcdc width=2 height=2></td>
+              </tr>
+              <tr>
+                <td bgcolor=#dcdcdc width=2></td><td bgcolor=#f8f8ff width=5></td>
+                <td valign=top><br><font size=+4 color=#00008b><b>Welcome!</b></font><br>
+                
+                <table width=100%>
+                <tr><td width=25%>
+                <div id="clockdate">
+                  <div class="clockdate-wrapper">
+                    <div id="clock"></div>
+                    <div id="date"></div>
+                  </div>
+                </div>
+                </td>
+                <td width=400 />
+                <td><center><img src="_uimages/20240518-pridefest2.jpg" height=195><br>
+                <font size=-1>Me and Mei-O at the Rochester Pride celebration,<br>May 18, 2024</font></center>
+                </td>
+                </tr>
+                <tr height=4 />
+                </table>
+                
+                <p><font size=+2 color=#00008b><b>About This Website</b></font>
+                <br>
+                For many years, I have had a website with many webpages about various aspects of our life which were 
+                all available to the public on the web (family pictures, trips we've taken, events we've attended,  
+                etc.) All, that is, except the pages about our grandchildren through which, with pictures 
+                gathered from many sources, I've been documenting their growth and progress over the years. All of 
+                those pages are password protected. Early in 2022, I decided that the <i>whole site</i> should be 
+                password protected, with the password given out only to family members and maybe a few close friends, 
+				which is the current state of the site at <!-- a href="http://www.shabsin.com/~rshabsin" 
+				-->http://www.shabsin.com/~rshabsin<!-- /a -->.
+                
+                <p>But there are a few pages that I'd like to be public, mostly for friends who I'm happy to share 
+				parts of our life with. No password is necessary to access these pages below. If you've found them 
+				accidentally, I hope you enjoy them.
+				<br><br>
+                
+                <!-- p>But, for the most part, this page is for me. The pages here are pages I can send to the people I
+                know are interested in them, and by having them here, they can view them without a user ID and 
+                password. Once I password-protected the entire site, they lost access, so this is a way to return 
+                access to them.-->
+				
+                <table cellpadding=0 cellspacing=0 border=0 align=center><tr><td>				
+				<!-- div style="width:440px;height:560px;overflow:scroll;padding:5px;" -->
+				
+				<!-- center><b>Special Pages</b></center> 
+                <ul>
+                  <li><a href="AustraliaNewZealand2024/AustraliaNewZealand2024-main.html" target=_top>Australia & New Zealand, 2024</a><br>
+                  <li><a href="Hawaii2025/Hawaii2025-main.html" target=_top>Hawaii, 2025</a><br>
+                  <li><a href="ScotlandNorway2025/ScotlandNorway2025-main.html" target=_top>Scotland and Norway, 2025</a><br>
+                </ul -->
+				
+                <!-- p><center><b>Other Pages</b></center -->
+				
+                <ul>
+                <!-- li><a href="2023-foodblog/2023-foodblog1.html" target=_top>My Food Blog<br -->
+                <!-- li><a href="AustraliaNewZealand2024/AustraliaNewZealand2024-main.html" target=_top>Australia & New Zealand, 2024<br>
+                <li><a href="Hawaii2025/Hawaii2025-main.html" target=_top>Hawaii, 2025<br><br -->
+                <li><a href="rsmainslideshow-imagesplus-rick.html" target=_top>Pictures From the Main Site</a><br>
+                <!-- li><a href="slideshow/rsmainslideshow.html" target=_top>A Slideshow of Pictures From the Main Site</a><br -->
+                <!-- li><a href="websiteslideshow/rsmainslideshow.html" target=_top>Our Slideshow</a><br -->
+                <li><a href="lydiaandmax/chickensavestheday/lydiaandmax2024-chickensavestheday.m.html" target=_top>Chicken Saves the Day!</a>
+                <!-- li><a href="AlaskaCruise2010/AlaskaCruise2010-main.html" target=_top>Alaska, 2010</a><br -->
+                <li><a href="zodiacanimals/animalsclick.html" target=_top>Our Chinese Zodiac Animals</a><br>
+                <li><a href="honeymoon/honeymoon.html" target=_top>Our Taiwan Honeymoon</a><br>
+                <li><a href="lishantrip/ChrisAtLiShan.html" target=_top>Our 1984 Trip to LiShan</a><br>
+                <li><a href="passweater/MyHighSchoolSweater1.html" target=_top>The Amazing Gold Sweater</a><br>
+                <li><a href="workhistory/workhistory.html" target=_top>My Career as a Software Engineer</a><br>
+	            <li><a href="Europe2007/pagliacci.html" target=_top>My Brief Moment as an Italian Opera Singer</a><br>
+                <li><a href="atcarticle/atcarticle.html" target=_top>Air Traffic Controller Article</a><br>
+                <li><a href="Vietnam/vietnam1.html" target=_top>My Time in Vietnam</a>
+                <li><a href="cruises/cruises.html" target=_top>Our Cruises</a><br>
+                <li><a href="menpai/TaiwanTrip2006-AddressPlate.html" target=_top>The menpai (門牌)</a><br>
+                <li><a href="YevaMilyutina/YevaMilyutina.html" target=_top>My Aunt Yeva</a><br>
+                <li><a href="blue/blue.html" target=_top>Blue</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="blue/blue2.html" target=_top>Blue II</a><br>
+                <li><a href="SirBentleyAlbum/SirBentleyAlbum.html" target=_top>Pilot to Copilot</a><br>
+                <li><a href="alienation/alienation.html" target=_top>Alienation and the Blues</a><br>
+                <li><a href="VonSteubenChoir/VonSteubenChoir.html" target=_top>Von Steuben High School Choir Recordings (1961-62)</a><br>
+                <li><a href="forestwondercamp/forestwondercamp.html" target=_top>Forest Wonder Camp</a><br>
+                <li><a href="Bob/bob.html" target=_top>Memories of Bob</a><br>
+                <li><a href="nelsonatkinsmuseum/nelsonatkinsatrmuseum-note1.html" target=_top>Chinese Art at the Nelson-Atkins Art Museum</a><br>
+                <li><a href="yinyutanghouse/2022-picture-a-day-yinyutanghouse.html" target=_top>The Yin Yu Tang (蔭餘堂) House</a><br>
+                <li><a href="ancestrythoughts/ancestrythoughts.html" target=_top>Ancestry Thoughts</a><br>
+                <li><a href="lakevisitor/lakevisitor.html" target=_top>A Visitor to Our Lake</a><br>
+                <li><a href="taiji/taijiclassaudio.html" target=_top>Taiji Sessions Music</a><br>
+                <li>The Making of...
+                  <ul>
+                    <li><a href="jiucai/2022-picture-a-day-jiucaihezi1.html" target=_top>韭菜盒子</a> (Chive pocket pie)<br>
+                    <li><a href="luobogao/2022-picture-a-day-luobogao1.html" target=_top>蘿蔔糕</a> (Turnip cake)<br>
+                    <li><a href="bawan/2023-picture-a-day-makingbawan1.html" target=_top>肉圓</a> (Taiwanese bawan)<br>
+                    <li><a href="congyoubing/2024-picture-a-day-congyoubing1.html" target=_top>蔥油餅</a> (Scallion Pancakes)
+                    <li><a href="boluomianbao/2023-picture-a-day-makingboluomianbao1.html" target=_top>菠蘿麵包</a> (Pineapple bread)<br>
+                    <li><a href="stuffedpeppers/2023-picture-a-day-stuffedpeppers1.html" target=_top>Stuffed Green Peppers and Cabbage Rolls</a><br>
+                    <li><a href="applecake/2023-picture-a-day-makingapplecake1.html" target=_top>Apple Cake</a><br>
+                    <li><a href="gingertea/2023-picture-a-day-makinggingertea1.html" target=_top>Honey-ginger Tea</a><br>
+                  </ul>
+                <!-- li><a href="praguecastleringingroom/praguecastleringingroom1.html" target=_top>A Photoshop Challenge</a><br -->
+                <!-- li><a href="kyotosushivisits/kyotosushivisits.html" target=_top>Our Visits to Kyoto Sushi</a><br --> 
+                <!-- li>More coming.... -->
+                </ul>
+                
+				<!-- /div -->
+	            </td></tr></table>
+				
+                <!-- p><font size=+2 color=#00008b><b>e-mail</b></font>
+                <p>If you want to e-mail me, I can be reached at: <a href="mailto:rshabsin@gmail.com"><u><font color=blue>rshabsin at gmail.com</font></u></a -->
+                <p><i>Last updated: December 25, 2025 (deleted stuff to recover disk space)</i>
+                   <!-- table cellspacing=0 cellpadding=0>
+                     <tr>
+                       <td>If you want to e-mail me, I can be reached at:</td>
+      				 <td width=4></td>
+                       <td valign=bottom><a href="mailto:rshabsin@gmail.com"><u><font color=blue>rshabsin at 
+                       gmail.com</font></u></a>
+                       </td>
+                     </tr>  
+                   <tr>
+                     <td colspan=3><i><i>Still under construction! (Last updated: October 7, 2023)</i></td>
+                   </tr>
+                   </table -->
+                </td>
+                <td bgcolor=#f8f8ff width=12></td><td bgcolor=#dcdcdc width=2></td>
+              </tr>
+              <tr>
+                <td bgcolor=#dcdcdc width=2></td><td width=12></td>
+                <td>&nbsp;</td>
+                <td width=12></td><td bgcolor=#dcdcdc width=2></td>
+              </tr>
+              <tr>
+                <td bgcolor=#dcdcdc width=2></td><td bgcolor=#dcdcdc width=12></td>
+                <td bgcolor=#dcdcdc height=2></td>
+                <td bgcolor=#dcdcdc width=12></td><td bgcolor=#dcdcdc width=2></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>     
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
