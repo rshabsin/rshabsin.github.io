@@ -1,0 +1,220 @@
+
+
+<html>
+<head>
+<title>"Chicken Saves the Day!"</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="../images/favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+<link rel="stylesheet" type="text/css" href="../css/danaformatstyle.css">
+
+<!--
+<a href="images/20221202-tendingtothez42.jpg">in storage</a> // standard link
+<a href="javascript:displayAbsoluteLink('../lydia/2018/images/20180220-lydiawithgrandpaplayingguitar2'); ">my right hand</a> // absolute link
+<a href="javascript:newWin('videowindow1', 'https://drive.google.com/file/d/1b3UmgQgvKq9c8jnll0RwSoRNmOpmUMT4', 40, 40, 800, 600, 1); ">played this</a> // video link
+<a href="javascript:newWin('notewindow', 'lydia2019-note2.html', 40, 40, 650, 480, 1); ">text here</a>  //note link
+<font size=-1><sup><a href="javascript:newWin('notewindow', 'lydia2019-note2.html', 40, 40, 650, 480, 1); ">note</a></sup></font>  // superscript note link
+[<a href="2022-picture-a-day-alternates.m.html?day=0">alternate</a>]
+-->
+
+<script src="../danaformatimagecontrol.js"></script>
+<script language="javascript">
+
+//*****************************************************************************************************************
+// start of code for passing a starting day into the page in the form of ....html?day=x, where day is actually    *
+// 1 less than the desired day (i.e., the day's index). The onload statement (see below) must call slideTo() with *
+// the proper index. The default index, if none is passed in, or if an invalid index is passed in, is 0.)         *
+//*****************************************************************************************************************
+
+document.onreadystatechange = function () //https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/sample-pass-multiple-values-web-resource-through-data-parameter
+  {
+  if (document.readyState == "complete")
+    {
+    getDataParam();
+    document.getElementById("loading").style.display = "none";  // hide the loading gif
+    }
+  }
+
+var startingDay = 0;
+var maxDays = 31;
+
+function getDataParam()
+  {
+  var vals = new Array();
+  if (location.search != "")
+    {
+    vals = location.search.substr(1).split("&");
+    for (var i in vals)
+      {
+      vals[i] = vals[i].replace(/\+/g, " ").split("=");
+      }
+    }
+
+  var found = false
+  for (var i in vals)
+    {
+    if (vals[i][0].toLowerCase() == "day")
+      {
+      found = true;
+      break;
+      }
+    }
+
+   if (!found)
+    {
+    if (document.location.href.includes("?"))
+      document.location.href = window.location.href.replace(window.location.search,'') + "#day1";
+    }
+  else
+    {
+    startingDay = vals[0][1];
+    if (startingDay >= document.getElementById("myTable").rows.length / 2)
+      startingDay = (document.getElementById("myTable").rows.length / 2) - 1;
+    }
+  }
+
+function hideDate()
+  {
+  var i = document.getElementById("myTable").rows.length / 2;
+  while (i < maxDays)
+   {
+   document.getElementById(i).style.visibility="hidden";
+   ++i;
+   }
+  }
+
+function myInit()
+  {
+  url = document.location.href;
+  if (document.location.href.includes("?"))
+    {
+    document.location.href = window.location.href.replace(window.location.search,'') + "#day" + ++startingDay;
+    }
+
+  hideDate();
+  }
+
+//*****************************************************************************************************************
+// end of code for passing a starting day into the page in the form of ....html?day=x, where day is actually      *
+// 1 less than the desired day (i.e., the day's index). The onload statement (see below) must call myInit(). The  *
+// default index, if none is passed in, or if an invalid index is passed in, is 0.                                *
+//*****************************************************************************************************************
+
+</script>
+</head>  
+
+<body onload="myInit()">
+
+<table align=center border=0 cellpadding=0 cellspacing=0>
+  <tr>
+    <td width=86 />
+
+    <td>
+      <table border=0 cellpadding=0 cellspacing=0 width=1024>
+        <tr>
+          <td colspan=3><center><img src="images/20240608-chickensavesthedaypage6-header.jpg" title="Chicken Saves the Day!"></center> 
+          </td> 
+        </tr>
+        <tr height=12 />
+        <tr><td colspan=3><center><font size=+3><b>Chicken Saves the Day!</b></font><br>
+		<font size=+2><b>by Lydia Shabsin</b></font></center></td></tr>
+        <tr height=12 />
+        <tr><td>Lydia wrote a book! Here is "Chicken Saves the Day!", the hard-cover edition.
+		<br><br>
+        <table width=100%><tr><td><i>(Click on any page to see it full size. Click <a href="javascript:window.history.back()">here</a> to return to the previous page.)</i></td>
+		<td align=right><a href="lydiaandmax2024-chickensavestheday.html">Alternate format</a></td></tr></table><br><br>
+        </td></tr>
+      </table>
+    </td>
+  </tr>
+</table> 
+
+<div id="loading">
+  <center><img id="loading-image" src="../_uimages/loader1.gif" alt="Loading..." /></center>
+</div>
+
+<center><table border=0 cellpadding=0 cellspacing=0 width=600 id=myTable>
+
+<tr><td><a name="day1" /></td></tr>
+
+<tr>
+<td align=center width=600><a href="images/20240608-chickensavesthedaycover.jpg"><img src="images/20240608-chickensavesthedaycover.jpg" width=450 height=600></a><br>
+
+<br><br>
+</td>
+</tr>
+
+<tr><td><a name="day2" /></td></tr>
+
+<tr>
+<td align=center width=600><a href="images/20240608-chickensavesthedaydedication.jpg"><img src="images/20240608-chickensavesthedaydedication.jpg" width=450 height=600></a><br>
+
+<br><br>
+</td>
+</tr>
+
+<tr><td><a name="day3" /></td></tr>
+
+<tr>
+<td align=center width=600><a href="images/20240608-chickensavesthedaypage1.jpg"><img src="images/20240608-chickensavesthedaypage1.jpg" width=450 height=600></a><br>
+
+<br><br>
+</td>
+</tr>
+
+<tr><td><a name="day4" /></td></tr>
+
+<tr>
+<td align=center width=600><a href="images/20240608-chickensavesthedaypage2.jpg"><img src="images/20240608-chickensavesthedaypage2.jpg" width=450 height=600></a><br>
+
+<br><br>
+</td>
+</tr>
+
+<tr><td><a name="day5" /></td></tr>
+
+<tr>
+<td align=center width=600><a href="images/20240608-chickensavesthedaypage3.jpg"><img src="images/20240608-chickensavesthedaypage3.jpg" width=450 height=600></a><br>
+
+<br><br>
+</td>
+</tr>
+
+<tr><td><a name="day6" /></td></tr>
+
+<tr>
+<td align=center width=600><a href="images/20240608-chickensavesthedaypage4.jpg"><img src="images/20240608-chickensavesthedaypage4.jpg" width=450 height=600></a><br>
+
+<br><br>
+</td>
+</tr>
+
+<tr><td><a name="day7" /></td></tr>
+
+<tr>
+<td align=center width=600><a href="images/20240608-chickensavesthedaypage5.jpg"><img src="images/20240608-chickensavesthedaypage5.jpg" width=450 height=600></a><br>
+
+<br><br>
+</td>
+</tr>
+
+<tr><td><a name="day8" /></td></tr>
+
+<tr>
+<td align=center width=600><a href="images/20240608-chickensavesthedaypage6.jpg"><img src="images/20240608-chickensavesthedaypage6.jpg" width=450 height=600></a><br>
+
+<br><br>
+</td>
+</tr>
+
+<tr><td><a name="day9" /></td></tr>
+
+<tr>
+<td align=center width=600><a href="images/20240608-chickensavesthedayabouttheauthor.jpg"><img src="images/20240608-chickensavesthedayabouttheauthor.jpg" width=450 height=600></a><br>
+
+<br><br>
+</td>
+</tr>
+
+</table></center>
+</body>
+</html>

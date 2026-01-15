@@ -1,0 +1,126 @@
+
+
+<html>
+<head>
+<title>"Chicken Saves the Day!"</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="../images/favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+<link rel="stylesheet" type="text/css" href="../danaformatstyle.css">
+
+<!--     
+<a href=\"javascript:displayLink('overlooktoguell21');\">big red puck</a> // standard link
+<a href=\"javascript:displayAbsoluteLink('../lydia/2018/images/20180220-lydiawithgrandpaplayingguitar2');\">my right hand</a> // absolute link 
+<a href=\"javascript:newWin('videowindow1', 'https://drive.google.com/file/d/1b3UmgQgvKq9c8jnll0RwSoRNmOpmUMT4', 40, 40, 800, 600, 1);\">played this</a> // video link
+<a href=\"javascript:newWin('notewindow', 'lydia2019-note2.html', 40, 40, 650, 480, 1);\">text here</a>  //note link
+-->
+
+<!-- Janice's pictures here: https://photos.google.com/share/AF1QipOMAH_2F2fKzVeEbKG-3O9ppuh2UrBoc25LtFy3WygIG4o5mwqope3meoil8_zMlA?key=NmFFOFUtMExVaXh1UHZ6V1dsc0RpTG8ySTBHVU93 -->
+     
+<style>
+  .captionContainer{margin:20px 20px 76px 20px; max-width:896px; height: 10px}
+</style>
+
+<script src="../danaformatimagecontrol.js"></script>
+<script language="javascript">
+
+document.addEventListener('DOMContentLoaded', function() 
+  {
+  checkAgent("lydiaandmax2024-chickensavestheday.m.html");  <!-- checkAgent moved to danaformatimagecontrol.js 1/19/2021 -->
+  }, false);
+  
+function videoWindow(urlLoc) // implemented 1/16/24 
+  { 
+  newWin('videoWindow1', urlLoc, window.screenX + 40, window.screenY + 40, 800, 600, 1); 
+  } 
+  
+var images = [
+  new Image("20240608-chickensavesthedaycover", "", true),
+  new Image("20240608-chickensavesthedaydedication", "", true),
+  new Image("20240608-chickensavesthedaypage1", "", true),
+  new Image("20240608-chickensavesthedaypage2", "", true),
+  new Image("20240608-chickensavesthedaypage3", "", true),
+  new Image("20240608-chickensavesthedaypage4", "", true),
+  new Image("20240608-chickensavesthedaypage5", "", true),
+  new Image("20240608-chickensavesthedaypage6", "", true),
+  new Image("20240608-chickensavesthedayabouttheauthor", "", true),
+]
+
+</script>
+
+</head>
+
+<body onload="init()" onkeydown="processKeyInput(event)">
+
+<table align=center border=0 cellpadding=0 cellspacing=0>
+  <tr>
+    <td width=86 />
+    
+    <td>
+      <table border=0 cellpadding=0 cellspacing=0 width=1024>
+        <tr>
+          <td colspan=3><center><img src="images/20240608-chickensavesthedaypage6-header.jpg" title="Chicken Saves the Day!"></center> 
+          </td>
+        </tr>
+        <tr height=12 />
+        <tr><td colspan=3><center><font size=+3><b>Chicken Saves the Day!</b></font><br>
+		<font size=+2><b>by Lydia Shabsin</b></font></center></td></tr>
+        <tr height=12 />
+        <tr><td>Six-year-old (okay, almost 7-year-old) Lydia wrote a book! Here is "Chicken Saves the Day!", the hard-cover edition.
+		<br><br>
+        <table width=100%><tr><td><i>(Click <a href="javascript:window.history.back()">here</a> to return to the previous page.)</i></td>
+		<td align=right><a href="lydiaandmax2024-chickensavestheday.m.html">Alternate format</a></td></tr></table><br><br>
+        </td></tr>
+          
+        <tr>
+          <td>
+            <table>
+              <tr>
+              <td class="arrow"><input id="left" type="image" src="../images/leftarrow.jpg" onclick="slideImage(false);"/></td>
+              <td class="mainPicture">
+                <div class="imgContainer"><img name="slide" ondblclick="displayMainImage()"></div>
+                <div class="captionContainer"><span id="text"></span> <span id="supplementalBackLink"> <img src="images/undoicon.jpg" onclick="slideTo(whichImage)"></a></span></div>
+              </td>
+             <td class="arrow"><input id="right" type="image" src="../images/rightarrow.jpg" onclick="slideImage(true);"/></td>
+            </tr>
+            </table>
+            
+            <div hidden>
+            <table class="thumbnails">
+              <tr>
+                <td align="center">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-2);">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-1);">
+                  </p>
+                </td>
+                <td align="center" class="highlightedThumbnail">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image" onclick="goTo(1);">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image" onclick="goTo(2);">
+                  </p>
+                </td>		 
+              </tr>
+            </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
