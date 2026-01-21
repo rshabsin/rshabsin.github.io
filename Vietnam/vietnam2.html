@@ -1,0 +1,73 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (Win95; U) [Netscape]">
+<link rel="shortcut icon" href="../favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+   <title>Rick in Vietnam</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//check if image object is supported, then preload images
+
+if (document.images)
+  {
+  rickon = new Image();
+  rickon.src = "images/rickstornpicture6.jpg";
+  rickoff = new Image();
+  rickoff.src = "images/rickstornpicture7.jpg";
+  }
+
+// function to change images to rollover state
+function rollon(imgName)
+  {
+  if (document.images)
+    {
+    document[imgName].src = eval(imgName + "on.src");
+    }
+  }
+
+// function to change images to non-rollover state
+function rolloff(imgName)
+  {
+  if (document.images)
+    {
+    document[imgName].src = eval(imgName + "off.src");
+    }
+  }
+
+var language = 0;
+
+function swap()
+  {
+  if (0 == language)
+    {
+    language = 1;
+    rollon('rick');
+    }
+  else
+    {
+    language = 0;
+    rolloff('rick');
+    }
+  }
+// -->
+</SCRIPT>
+
+<link rel="stylesheet" href="rsstyles.css">
+
+</head>
+<body>
+
+<table>
+  <tr>
+    <td width=80 />
+    <td><h2>Rick in Vietnam</h2>
+        <p><font size=-1>Click on the picture to see the torn and taped original.</font>
+        <!-- p><a onMouseOver="rollon('rick')" onMouseOut="rolloff('rick')"><img src="images/rickstornpicture5.jpg" name="rick" border=0></a -->
+        <p><a onclick="swap()"><img src="images/rickstornpicture7.jpg" name="rick" border=0></a>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

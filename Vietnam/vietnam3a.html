@@ -1,0 +1,144 @@
+
+<html>
+<head>
+<title>Vietnam - Destruction at Tan Son Nhut</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../danaformatstyle.css">
+<link rel="shortcut icon" href="../favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+
+<!-- change the third margin: parm (bottom) to control the 
+     spacing between the comment and the thumbnails: 
+      4 for no comments
+     22 for 1 line
+     40 for 2 lines 
+     58 for 3 lines 
+     76 for 4 lines 
+     98 for 5 lines (tablet needs this sometimes)
+     
+     4 lines on a desktop may end up being 5 on a tablet, 
+     so this may need to be adjusted from what's OK on a
+     desktop. Omit the following line and the default 
+     in the external css is 100 -->
+
+<!--     
+<a href=\"javascript:displayLink('overlooktoguell21');\">big red puck</a>
+-->
+
+<style>
+  .captionContainer{margin:20px 20px 4px 20px; max-width:896px; height: 10px}
+</style>
+
+<script src="../danaformatimagecontrol.js"></script>
+<script language="javascript">
+
+function newWin(winName, urlLoc, x, y, w, h, s) 
+{ 
+  _info = "toolbar=no";
+  _info += ",location=no";
+  _info += ",directories=no";
+  _info += ",status=no";
+  _info += ",menubar=no";
+  _info += ",scrollbars=" + s;
+  _info += ",resizable=no";
+  _info += ",left=" + x;
+  _info += ",top=" + y; 
+  _info += ",width=" + w;
+  _info += ",height=" + h;
+  DispWin=window.open(urlLoc, winName, _info).window.focus()
+} 
+
+var images = [
+  new Image("destroyedrf4-2", "", true),
+  new Image("destroyedbuilding1", "", true),
+  new Image("destroyedplane2", "", true),
+  new Image("destroyedc130-2", "", true),
+  new Image("destroyedc119-1", "", true),
+  new Image("destroyedbuilding2", "", true),
+  new Image("destroyedtwinbeech1", "", true),
+  new Image("destroyedplane1", "", true),
+  new Image("destroyedbuilding3", "", true),
+  new Image("destroyedfueltruck1", "", true),
+]
+</script>
+</head>
+
+<body onload="init()" onkeydown="processKeyInput(event)">
+
+<table border=0 cellpadding=0 cellspacing=0 width=1450>
+  <tr>
+    <td width=86 />
+    <td>
+      <table border=0 cellpadding=0 cellspacing=0>
+        <tr>
+          <td><center><img src="images/destroyedc130-title1.jpg"></td>
+        </tr>
+        <tr>
+          <td><br><center><font size=+3><b>Vietnam - Destruction at Tan Son Nhut</b></font></center></td>
+        </tr>
+        <tr height=12><td /></tr>
+        <tr>
+          <td>
+          <table width=1024>
+            <tr>
+              <td>My pictures from Tan Son Nhut Air Base in Saigon, Vietnam after a major rocket attack 
+              on the base. These pictures were taken either during the Tet Offensive in January, 1968 or 
+			  on April 6<sup>th</sup> of that year, I'm not sure which. The morning after the pounding, I walked 
+			  around and took these pictures of several destroyed barracks that pretty much took direct hits 
+              (with several fatalities) and the flight line where many planes and vehicles were destroyed. 
+              The enemy had us zeroed in....
+              </td>
+            </tr>
+          </table> 
+          </td>
+        </tr>
+      </table>
+      
+      <table border=0 width=100% cellspacing=0 cellpadding=0> 
+        <tr>
+          <td class="arrow"><input id="left" type="image" src="../images/leftarrow.jpg" onclick="slideImage(false);"/></td>
+          <td class="mainPicture">
+            <div class="imgContainer"><img name="slide" ondblclick="displayMainImage()"></div><br>
+          </td>
+          <td class="arrow"><input id="right" type="image" src="../images/rightarrow.jpg" onclick="slideImage(true);"/>
+          <div class="captionContainer"><span id="text"></span> <span id="supplementalBackLink"> <img src="images/undoicon.jpg" 
+            onclick="slideTo(whichImage)"></a></span></div></td>
+        </tr>
+      </table>
+        
+      <div hidden>
+      <table class="thumbnails">
+        <tr>
+          <td align="center">
+            <p align="center">
+              <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-2);">
+            </p>
+          </td>
+          <td align="center">
+            <p align="center">
+              <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-1);">
+            </p>
+          </td>
+          <td align="center" class="highlightedThumbnail">
+            <p align="center">
+              <img class="thumbnailImage" ALT="Default Image">
+            </p>
+          </td>
+          <td align="center">
+            <p align="center">
+              <img class="thumbnailImage" ALT="Default Image" onclick="goTo(1);">
+            </p>
+          </td>
+          <td align="center">
+            <p align="center">
+              <img class="thumbnailImage" ALT="Default Image" onclick="goTo(2);">
+            </p>
+          </td>		 
+        </tr>
+      </table>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
