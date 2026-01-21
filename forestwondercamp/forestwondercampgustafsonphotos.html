@@ -1,0 +1,148 @@
+
+<html>
+<head>
+<title>Old Forest Wonder Camp Photos</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="../danaformatstyle.css">
+
+<!-- change the third margin: parm (bottom) to control the 
+     spacing between the comment and the thumbnails: 
+      4 for no comments
+     22 for 1 line
+     40 for 2 lines 
+     58 for 3 lines 
+     76 for 4 lines 
+     98 for 5 lines (tablet needs this sometimes)
+     
+     4 lines on a desktop may end up being 5 on a tablet, 
+     so this may need to be adjusted from what's OK on a
+     desktop. Omit the following line and the default 
+     in the external css is 100 -->
+
+<!--     
+<a href=\"javascript:displayLink('overlooktoguell21');\">big red puck</a>
+-->
+
+<style>
+  .captionContainer{margin:20px 20px 22px 20px; max-width:896px; height: 10px}
+</style>
+
+<script src="../danaformatimagecontrol.js"></script>
+<script language="javascript">
+
+function newWin(winName, urlLoc, x, y, w, h, s) 
+{ 
+  _info = "toolbar=no";
+  _info += ",location=no";
+  _info += ",directories=no";
+  _info += ",status=no";
+  _info += ",menubar=no";
+  _info += ",scrollbars=" + s;
+  _info += ",resizable=no";
+  _info += ",left=" + x;
+  _info += ",top=" + y; 
+  _info += ",width=" + w;
+  _info += ",height=" + h;
+  DispWin=window.open(urlLoc, winName, _info).window.focus()
+} 
+
+var images = [
+  new Image("gustafsonphotos1", "", true),
+  new Image("gustafsonphotos2", "", true),
+  new Image("gustafsonphotos3", "", true),
+  new Image("gustafsonphotos4", "", true),
+  new Image("gustafsonphotos5", "", true),
+  new Image("gustafsonphotos6", "", true),
+  new Image("gustafsonphotos7", "", true),
+  new Image("gustafsonphotos8", "", true),
+  new Image("gustafsonphotos9", "", true),
+  new Image("gustafsonphotos10", "", true),
+  new Image("gustafsonphotos11", "", true),
+  new Image("gustafsonphotos12", "", true),
+  new Image("gustafsonphotos13", "", true),
+  new Image("gustafsonphotos14", "", true),
+  new Image("gustafsonphotos15", "An <a href=\"javascript:displayLink('volleyball1a');\">uncanny coincidence</a>; " + 
+                                 "two pictures of the same location taken almost 30 years apart! <i>(Click " + 
+                                 "<a href=\"javascript:window.history.back();\">here</a> to return to the previous page.)</i>", true),
+]
+
+</script>
+
+</head>
+
+<body onload="init()" onkeydown="processKeyInput(event)">
+
+<table border=0 width=1130>
+  <tr>
+    <td width=86 />
+    <td>
+      <table border=0 cellpadding=0 cellspacing=0 width=1024>
+        <tr>
+          <td>
+          <center><font size=+3><b>Old Forest Wonder Camp Photos</b></font></center>
+          <p>On April 19<sup>th</sup>, 2018, I received the following e-mail (no name here; he wants to remain anonymous):
+          <blockquote>
+            <img src="images/gustafsonemail1.jpg">
+          </blockquote>
+          (Once again, the "Wonder" vs. "Wander" usage rears its ugly head.) I replied to the sender and told him I'd be interested in 
+          any pictures or information he had. Then on May 11<sup>th</sup>, I received this e-mail, with a bunch of photos attached:
+          <blockquote>
+            <img src="images/gustafsonemail2.jpg">
+          </blockquote>
+          That's all the information the sender provided, but I was quite grateful for the below pictures 
+          he sent. I'm pretty sure the first two are of the "dorms" where we campers lived. The pictures aren't the greatest quality (they 
+          are from the '80s), but they're not too bad. Take a look.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table>
+              <tr>
+              <td class="arrow"><input id="left" type="image" src="../images/leftarrow.jpg" onclick="slideImage(false);"/></td>
+              <td class="mainPicture">
+                <div class="imgContainer"><img name="slide" ondblclick="displayMainImage()"></div>
+                <div class="captionContainer"><span id="text"></span> <span id="supplementalBackLink"> <img src="images/undoicon.jpg" onclick="slideTo(whichImage)"></a></span></div>
+              </td>
+              <td class="arrow"><input id="right" type="image" src="../images/rightarrow.jpg" onclick="slideImage(true);"/></td>
+            </tr>
+            </table>
+            
+            <div  style="display: none;"><table class="thumbnails">
+              <tr>
+                <td align="center">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-2);">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-1);">
+                  </p>
+                </td>
+                <td align="center" class="highlightedThumbnail">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image" onclick="goTo(1);">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image" onclick="goTo(2);">
+                  </p>
+                </td>		 
+              </tr>
+            </table></div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

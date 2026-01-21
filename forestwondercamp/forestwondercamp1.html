@@ -1,0 +1,137 @@
+
+<html>
+<head>
+<title>Forest Wonder Camp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+<link rel="stylesheet" type="text/css" href="../danaformatstyle.css">
+<link rel="shortcut icon" href="../favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+
+<!-- change the third margin: parm (bottom) to control the 
+     spacing between the comment and the thumbnails: 
+      4 for no comments
+     22 for 1 line
+     40 for 2 lines 
+     58 for 3 lines 
+     76 for 4 lines 
+     98 for 5 lines (tablet needs this sometimes)
+     
+     4 lines on a desktop may end up being 5 on a tablet, 
+     so this may need to be adjusted from what's OK on a
+     desktop. Omit the following line and the default 
+     in the external css is 100 -->
+<style>
+  .captionContainer{margin:20px 20px 38px 20px; max-width:896px; height: 10px}
+</style>
+
+<!-- <a href=\"javascript:displayLink('miniaturemarioandluigi');\"> linking in a supplemental picture -->
+
+<script src="../danaformatimagecontrol.js"></script>
+<script language="javascript">
+
+var images = [   
+  new Image("forsaletrulia2", "The house at the south end of the causeway that split the lake and led to the camp. It didn't exist way back when we were campers there, " + 
+                              "and appears to have been built relatively recently."), 
+  new Image("forsaletrulia3", ""),
+  new Image("forsaletrulia4", ""),  
+  new Image("forsaletrulia5", ""), 
+  new Image("forsaletrulia6", ""),  
+  new Image("forsaletrulia7", ""),  
+  new Image("forsaletrulia8", ""), 
+  new Image("forsaletrulia9", ""), 
+  new Image("forsaletrulia10", "The causeway that split the lake in two and led to the campgrounds."), 
+  new Image("forsaletrulia11", ""), 
+  new Image("forsaletrulia12", ""), 
+  new Image("forsaletrulia13", ""), 
+  new Image("forestwonderlake4", "From Google Maps, you can see how isolated the old camp is.")                                  
+]
+
+</script>
+
+</head>
+
+<body onload="init()" onkeydown="processKeyInput(event)">
+
+<table border=0 width=80%>
+  <tr>
+    <td width=86 />
+      <td>
+        <center><font size=+3><b>Forest Wonder Camp - For Sale!</b></font></center>
+ 
+      <table border=0 cellpadding=1 cellspacing=1>   
+        <tr>
+          <td width=1300><p><br>On September 14, 2016, I received the following e-mail:<br>
+          <center><img src="images/forsaleemail1.jpg"></center>
+          
+          <p>I didn't know much about the history of the property, but when I asked him, my older brother, Joel, sent me this:
+          <blockquote><i>I don't know for sure, but there was a counselor at the camp, Boots, who lived in the area and was a hunter, fisherman and wilderness 
+          guide back then. He occasionally told stories that the camp was once owned by Chicago gangsters connected with the Al Capone gang. The gang owned several 
+          taverns in the area after prohibition, mostly in Mercer, Wisconsin, and used the camp grounds as part of the liquor smuggling business during prohibition.</i>         
+          </blockquote>
+          
+          <p>So, after doing a search on the Internet, I found this listing for the old Forest Wonder Camp property:
+          <center><img src="images/forsaletrulia1.jpg"></center>
+          <!-- p>It didn't mention the full size of the property, whether or not the whole old camp grounds were included, but a further search on Century 21 Realtors found this:
+          <center><img src="images/forsalecentury212.jpg"></center>
+          <p>which confirmed that the whole old camp, all 335 acres, was included in the sale. -->
+          <p>Taken from the listing, below are a bunch of pictures of the home now on the property and some of the beautiful water and land
+          included with the 4 acre house lot. If I had the money, well, no, I still don't think I'd want to live there (like I once wanted). Its
+          extreme seclusion probably means no Internet or cell phone service, no cable, particularly tough and inconvenient winters (a <b>lot</b> 
+          of snow plowing!), etc. Once a dream, no longer.<br><br>      
+          </td>
+        </tr>
+      </table>
+      
+      <table>
+        <tr>
+          <td>
+            <table>
+              <tr>
+              <td class="arrow"><input id="left" type="image" src="../images/leftarrow.jpg" onclick="slideImage(false);"/></td>
+              <td class="mainPicture">
+                <div class="imgContainer"><img name="slide" ondblclick="displayMainImage()"></div>
+                <div class="captionContainer"><span id="text"></span> <span id="supplementalBackLink"> <img src="../images/undoicon.jpg" onclick="slideTo(whichImage)"></a></span></div>
+              </td>
+             <td class="arrow"><input id="right" type="image" src="../images/rightarrow.jpg" onclick="slideImage(true);"/></td>
+
+            </tr>
+            </table>
+            
+            <div  style="display: none;"><table class="thumbnails">
+              <tr>
+                <td align="center">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-2);">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-1);">
+                  </p>
+                </td>
+                <td align="center" class="highlightedThumbnail">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image" onclick="goTo(1);">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                            <img class="thumbnailImage" ALT="Default Image" onclick="goTo(2);">
+                  </p>
+                </td>		 
+              </tr>
+            </table></div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
