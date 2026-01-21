@@ -1,0 +1,110 @@
+
+<html>
+<head>
+<title>My Aunt, Yeva Milyutina</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="../favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+<link rel="stylesheet" href="../css/rsstyles.css">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//check if image object is supported, then preload images
+
+if (document.images)
+  {
+  historyon = new Image();
+  historyon.src = "images/yevamilyutinaenglishhistory3.jpg";
+  historyoff = new Image();
+  historyoff.src = "images/yevamilyutinarussianhistory3.jpg";
+  }
+
+// function to change images to rollover state
+function rollon(imgName)
+  {
+  if (document.images)
+    {
+    document[imgName].src = eval(imgName + "on.src");
+    }
+  }
+
+// function to change images to non-rollover state
+function rolloff(imgName)
+  {
+  if (document.images)
+    {
+    document[imgName].src = eval(imgName + "off.src");
+    }
+  }
+
+// -->
+</SCRIPT>
+
+</head>
+
+<script type=text/javascript>
+function newWin(winName,urlLoc,x,y,w,h,s) 
+  { 
+  _info = "toolbar=no";
+  _info += ",location=no";
+  _info += ",directories=no";
+  _info += ",status=no";
+  _info += ",menubar=no";
+  _info += ",scrollbars=" + s;
+  _info += ",resizable=no"; 
+  _info += ",height=" + h;
+  _info += ",width=" + w;
+  _info += ",left=" + x;
+  _info += ",top=" + y;
+  DispWin=window.open(urlLoc,winName,_info).window.focus()
+  } 
+  
+var language = 0;
+
+function swap()
+  {
+  if (0 == language)
+    {
+    language = 1;
+    rollon('history');
+    }
+  else
+    {
+    language = 0;
+    rolloff('history');
+    }
+  }
+</script>
+
+<body>
+
+<table width=100%>
+  <tr>
+    <td width=80 />
+    <td>
+    <center><img src="images/GirlWithTheHatbox-header1.jpg" title="From the opening credits of
+    &#8220;The Girl With the Hat Box.&#8220;"></center><br><br>
+
+    <table>
+    <tr>
+    
+    <td width=80 />
+    <td>
+    <h1>My Aunt, Yeva Milyutina</h1>
+    <p><font size=+3>Ева Милютина</b></font>
+    
+    <p>Here's another Russian webpage concerning my mom's sister, my Aunt Yeva, that I've saved in case it ever disappears from the web.
+    <b>You can click on the article</b> to toggle between Russian and English. I'm not sure why the translations of the second and third movies 
+    in the list came up blank, but the second one is "The Tragedy of Evlampiya Chirkina" and the third is "Girl With the Hat Box".
+    
+    <p><a onclick="swap()"><img src="images/yevamilyutinarussianhistory3.jpg" name="history" width=100% border=0></a><br>
+    </td>
+    <td width=80 />
+    </tr>
+    </table>
+    
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
