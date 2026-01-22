@@ -1,0 +1,294 @@
+
+
+<html>
+<head>
+<title>Yin Yu Tang House</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="../favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+
+<link rel="stylesheet" type="text/css" href="../danaformatstyle.css">
+
+<!-- change the third margin: parm (bottom) to control the 
+     spacing between the comment and the thumbnails: 
+      4 for no comments
+     22 for 1 line
+     40 for 2 lines 
+     58 for 3 lines 
+     76 for 4 lines 
+     98 for 5 lines (tablet needs this sometimes)
+     
+     4 lines on a desktop may end up being 5 on a tablet, 
+     so this may need to be adjusted from what's OK on a
+     desktop. Omit the following line and the default 
+     in the external css is 100 -->
+     
+<!--     
+<a href=\"javascript:displayLink('overlooktoguell21');\">big red puck</a> // standard link
+<a href=\"javascript:displayAbsoluteLink('../lydia/2018/images/20180220-lydiawithgrandpaplayingguitar2');\">my right hand</a> // absolute link 
+<a href=\"javascript:newWin('videowindow1', 'https://drive.google.com/file/d/1b3UmgQgvKq9c8jnll0RwSoRNmOpmUMT4', 40, 40, 800, 600, 1);\">played this</a> // video link
+<a href=\"javascript:newWin('notewindow', 'lydia2019-note2.html', 40, 40, 650, 480, 1);\">text here</a>  //note link
+-->
+     
+<style>
+  .captionContainer{margin:20px 20px 76px 20px; max-width:896px; height: 10px}
+</style>
+
+<script src="../danaformatimagecontrol.js"></script>
+<script language="javascript">
+
+//*****************************************************************************************************************  
+// start of code for passing a starting day into the page in the form of ....html?day=x, where day is actually    *
+// 1 less than the desired day (i.e., the day's index). The onload statement (see below) must call slideTo() with *
+// the proper index. The default index, if none is passed in, or if an invalid index is passed in, is 0.)         *
+//*****************************************************************************************************************
+
+document.onreadystatechange = function () //https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/sample-pass-multiple-values-web-resource-through-data-parameter
+  {  
+  if (document.readyState == "complete") 
+    {  
+    getDataParam();  
+    }  
+  }
+   
+var startingDay = 0;
+var maxDays = 1; // not used
+
+function getDataParam() 
+  {
+  var vals = new Array();  
+  if (location.search != "") 
+    {  
+// alert(location.search);
+    vals = location.search.substr(1).split("&");  
+// alert(vals);
+    for (var i in vals) 
+      {  
+      vals[i] = vals[i].replace(/\+/g, " ").split("=");  
+      }  
+    }
+     
+  var found = false;  
+  for (var i in vals) 
+    {  
+    if (vals[i][0].toLowerCase() == "day") 
+      {  
+      found = true;  
+      break;  
+      }  
+    }
+      
+   if (!found)  
+    { 
+    slideTo(0); 
+    }  
+  else
+    {
+    startingDay = vals[0][1];
+    if (startingDay > (images.length - 1))
+      startingDay = images.length - 1;
+//    alert(startingDay);
+    }
+  }
+  
+function myInit()
+  {
+  init();  // call Dana's init()
+  if (0 != startingDay)  // calling Dana's init() still doesn't stop an error from being thrown if startingDay = 0.
+    {
+    if ((images.length - 1) == startingDay)  
+      slideTo(startingDay);
+    else
+      {
+      slideTo(++startingDay);
+      slideImage(false);
+      }
+    }
+  }
+  
+//*****************************************************************************************************************  
+// end of code for passing a starting day into the page in the form of ....html?day=x, where day is actually      *
+// 1 less than the desired day (i.e., the day's index). The onload statement (see below) must call myInit(). The  *
+// default index, if none is passed in, or if an invalid index is passed in, is 0.                                *
+//*****************************************************************************************************************
+
+document.addEventListener('DOMContentLoaded', function() 
+  {
+  checkAgent("2022-picture-a-day-yinyutanghouse.m.html");  <!-- checkAgent moved to danaformatimagecontrol.js 1/19/2021 -->
+  }, false);
+
+var images = [
+  new Image("20220617-yinyutanghouse2", "The main courtyard upon entry into the house. Only about 10-12 people are let in every half hour.", true),
+  new Image("20220617-yinyutanghouse3", "Mei-O learned to ride a bike just like this. It was her father's bike, and though she was too small to reach " + 
+                                        "the seat, she'd just stick one of her legs through the triangle the frame makes and, with one foot on each " + 
+                                        "pedal, off she went.", true),
+  new Image("20220617-yinyutanghouse4", "", true),
+  new Image("20220617-yinyutanghouse5", "", true),
+  new Image("20220617-yinyutanghouse6", "<a href=\"javascript:displayLink('20220617-yinyutanghouse6a');\">The poster</a> reads, \"Learn From Lei Feng’s " + 
+                                        "Good Example. Serve the people wholeheartedly.\"", true),
+  new Image("20220617-yinyutanghouse7", "", true),
+//  new Image("20220617-yinyutanghouse9", "<a href=\"javascript:displayLink('20220617-yinyutanghouse9a');\">A quote</a> from Mao Zedong.", true),
+  new Image("20220617-yinyutanghouse9", "A quote from Mao Zedong.<br>\"All our working cadres, regardless of the level of position, it is the diligence " + 
+                                        "of the people, everything we do is to serve the people, ......\"<br>(The Task of 1945)", true),
+  new Image("20220617-yinyutanghouse10", "This is a 火桶. Click <a href=\"javascript:displayLink('20220617-yinyutanghouse66');\">here</a> (from the museum's " + 
+                                         "brochure about the house) to see its surprising use.", true),
+  new Image("20220617-yinyutanghouse11", "", true),
+  new Image("20220617-yinyutanghouse12", "An infant or toddler seat.", true),
+  new Image("20220617-yinyutanghouse13", "", true),
+  new Image("20220617-yinyutanghouse14", "Leaaning against the wall is a bamboo bed, similar to one Mei-O and I slept in when we lived in Taiwan.", true),
+  new Image("20220617-yinyutanghouse15", "This looks like a coffin, but it could just be a storage bin.", true),
+  new Image("20220617-yinyutanghouse16", "", true),
+  new Image("20220617-yinyutanghouse17", "", true),
+  new Image("20220617-yinyutanghouse18", "A raincoat. Mei-O's father used to have one like this.", true),
+  new Image("20220617-yinyutanghouse19", "The kitchen. Here's <a href=\"javascript:displayLink('20220617-yinyutanghouse21');\">another look</a>.", true),
+  new Image("20220617-yinyutanghouse20", "", true),
+  new Image("20220617-yinyutanghouse22", "", true),
+  new Image("20220617-yinyutanghouse23", "", true),
+  new Image("20220617-yinyutanghouse24", "", true),
+  new Image("20220617-yinyutanghouse25", "On the second floor.", true),
+  new Image("20220617-yinyutanghouse26", "", true),
+  new Image("20220617-yinyutanghouse27", "", true),
+  new Image("20220617-yinyutanghouse28", "Here's <a href=\"javascript:displayLink('20220617-yinyutanghouse62');\">me</a>.", true),
+  new Image("20220617-yinyutanghouse29", "One of the bedrooms.", true),
+  new Image("20220617-yinyutanghouse30", "", true),
+  new Image("20220617-yinyutanghouse31", "A baby bed or bassinet.", true),
+  new Image("20220617-yinyutanghouse32", "", true),
+  new Image("20220617-yinyutanghouse33", "", true),
+  new Image("20220617-yinyutanghouse34", "", true),
+  new Image("20220617-yinyutanghouse35", "A pillow.", true),
+  new Image("20220617-yinyutanghouse36", "", true),
+  new Image("20220617-yinyutanghouse37", "", true),
+  new Image("20220617-yinyutanghouse38", "", true),
+  new Image("20220617-yinyutanghouse39", "", true),
+  new Image("20220617-yinyutanghouse40", "", true),
+  new Image("20220617-yinyutanghouse41", "", true),
+  new Image("20220617-yinyutanghouse42", "A high chair for a toddler.", true),
+  new Image("20220617-yinyutanghouse43", "", true),
+  new Image("20220617-yinyutanghouse44", "", true),
+  new Image("20220617-yinyutanghouse45", "A mahjong set.", true),
+  new Image("20220617-yinyutanghouse46", "The hallway was too narrow for my walker to walk through, so we had to fold it up and have <a href=\"javascript:displayLink('20220617-yinyutanghouse47');\">Mei-O " + 
+                                         "carry it</a>.", true),
+  new Image("20220617-yinyutanghouse48", "", true),
+  new Image("20220617-yinyutanghouse49", "", true),
+  new Image("20220617-yinyutanghouse50", "", true),
+  new Image("20220617-yinyutanghouse51", "The main courtyard was open to the elements.", true),
+  new Image("20220617-yinyutanghouse52", "Another bedroom.", true),
+  new Image("20220617-yinyutanghouse54", "Here's <a href=\"javascript:displayLink('20220617-yinyutanghouse53');\">another look</a>.", true),
+  new Image("20220617-yinyutanghouse55", "Here's a closer look at <a href=\"javascript:displayLink('20220617-yinyutanghouse56');\">the pictures</a>. The poster reads \"We must never forget the " + 
+                                         "class struggle. Never forget the dictatorship of the proletariat. Never forget to highlight politics. Never forget to hold high the great red flag of Mao " + 
+                                         "Zedong's Thought.\"", true),
+  new Image("20220617-yinyutanghouse57", "", true),
+  new Image("20220617-yinyutanghouse58", "", true),
+  new Image("20220617-yinyutanghouse59", "", true),
+  new Image("20220617-yinyutanghouse60", "That's Chairman Mao Zedong's picture on the wall.", true),
+  new Image("20220617-yinyutanghouse65", "One of the entrances.", true),
+  new Image("20220617-yinyutanghouse61", "Click <a href=\"#\" onclick=\"slideTo(0); return(false);\">here</a> to return to the first picture.", true),
+]
+
+</script>
+
+</head>
+
+<body onload="myInit()" onkeydown="processKeyInput(event)">
+
+<table align=center border=0 cellpadding=0 cellspacing=0>
+  <tr>
+    <td width=86 />
+    
+    <td>
+      <table border=0 cellpadding=0 cellspacing=0 width=1024>
+        <tr>
+          <td colspan=3><center><a href="2022-picture-a-day-yinyutanghouse.m.html"><img src="images/20220617-yinyutanghouse-header.jpg"></a></center> <!-- Photoshop font: TNR, italic, 36-pt., strong -->
+          </td>
+        </tr>
+        <tr height=12 /> 
+        <tr>
+          <td><center><font size=+3><b>The Yin Yu Tang House (蔭餘堂)</font><br>
+          <font size=+2>Peabody Essex Museum, Salem, Massachusetts</font></center>
+          </td>
+        </tr>
+        <tr height=12 /> 
+        <tr>
+          <td>
+          From the Peabody Essex Museum's brochure about the Yin Yu Tang House: 
+          <blockquote><i><font color=red>Why is the house called Yin Yu Tang?</font><br>
+          The name Yin Yu Tang suggests the desire to shelter many future generations, as well as the hope that descendants will become high officials.
+          <p><font color=red>Where was the house located in China?</font><br>
+          Yin Yu Tang is from a small village in southeastern China, Huang Cun, in a mountainous region in Anhui Province. It is about 250 miles southwest of Shanghai.
+          <center><img src="images/20220617-yinyutanghouse64.jpg" width=400></center>
+          <p><font color=red>Who lived in the house?</font><br>
+          Yin Yu Tang was inhabited by multiple generations of the Huang family, with 20 to 30 people living in the house at any one time. Eight generations lived 
+          here over a period of 200 years.
+          <p><font color=red>When was the house built?</font><br>
+          Yin Yu Tang was built around 1800. 
+          <p><font color=red>Are all of the objects original to the house/family?</font><br>
+          Sixty to seventy percent of the objects are original to the house. The other objects all come from homes with similar histories in the same region.
+          <p><font color=red>How did the house come to the Peabody Essex Museum?</font><br>
+          The house was part of a cultural exchange agreement with the local Chinese authorities in the Huizhou region of Anhui Province. The exchange helped 
+          promote the culture and architecture of the region to an international audience and supported architectural preservation projects in the province.</i>
+          </blockquote>
+          
+          <!-- p>Though the house itself is over 200 years old, many of the objects in it were used by recent inhabitants. Many of the items often reminded me of the 
+          years I spent in Taiwan in the late '60s and early '70s, especially the year I spent living in Mei-O's parents' house while attending Donghai University 
+          in Taichung from September, 1972 to June, 1973. It was a very old house, lived in for several generations before Mei-O's parents, --> 
+          
+          <p>Here is some <a href="javascript:newWin('imagewindow1', 'images/20220617-yinyutanghouse67.jpg', 40, 40, 440, 1024, 1);">more information</a> about the 
+          house from a plaque on the museum's wall.
+          
+          <p>We visited the house on June 17<sup>th</sup>, 2022, while we were visiting Chris and Dana and Max and Lydia in Boston. Here are a bunch of pictures 
+          from our visit. <!-- Click <a href="2022-picture-a-day-june.html?day=16">here</a> to return to the "A Year In Photos - June, 2022," web page. --><br><br>
+          </td>
+        </tr>
+        <tr height=12 /> 
+        <tr>
+          <td>
+            <table>
+              <tr>
+              <td class="arrow"><input id="left" type="image" src="../images/leftarrow.jpg" onclick="slideImage(false);"/></td>
+              <td class="mainPicture">
+                <div class="imgContainer"><img name="slide" ondblclick="displayMainImage()"></div>
+                <div class="captionContainer"><span id="text"></span> <span id="supplementalBackLink"> <img src="../images/undoicon.jpg" onclick="slideTo(whichImage)"></a></span></div>
+              </td>
+             <td class="arrow"><input id="right" type="image" src="../images/rightarrow.jpg" onclick="slideImage(true);"/></td>
+            </tr>
+            </table>
+            
+            <div hidden>
+            <table class="thumbnails">
+              <tr>
+                <td align="center">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-2);">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image" onclick="goTo(-1);">
+                  </p>
+                </td>
+                <td align="center" class="highlightedThumbnail">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image" onclick="goTo(1);">
+                  </p>
+                </td>
+                <td align="center">
+                  <p align="center">
+                    <img class="thumbnailImage" ALT="Default Image" onclick="goTo(2);">
+                  </p>
+                </td>		 
+              </tr>
+            </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
