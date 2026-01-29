@@ -2,6 +2,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="shortcut icon" href="../favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+<link rel="stylesheet" type="text/css" href="../mypopup-new.css">
 <title>Mei-O</title>
 
 <link rel="stylesheet" href="../rsstyles.css">
@@ -25,6 +26,14 @@ function newWin(winName,urlLoc,x,y,w,h,s)
   _info += ",top=" + y;
   DispWin=window.open(urlLoc,winName,_info).window.focus()
 } 
+
+// needed for popup-new.css
+// <div class="popup" onmouseover="myPopup('myPopupx')" onmouseout="myPopup('myPopupx')";><sup><font size=-1 
+//   color=green>note</font></sup><span class="popuptext" id="myPopupx">popup text</span></div>
+function myPopup(popupid) {
+  var popup = document.getElementById(popupid);
+  popup.classList.toggle("show");
+}
 </script>
 
 <body bgcolor="#ffff80">
@@ -95,7 +104,9 @@ October 10<sup>th</sup> (a major holiday in Taiwan, their Independence Day, simi
 So now, Mei-O has three birthdays: on the evening before the Mid-Autumn Festival (August 14<sup>th</sup> 
 on the lunar calendar), September 25<sup>th</sup> (her <i>real</i> birthday, the one
 we actually celebrate), and October 10<sup>th</sup>, her official birthday, the one on her driver's
-license, passport, etc.<br><br>&nbsp;
+license, passport, etc.<span class="popup" onmouseover="myPopup('birthdate')" onmouseout="myPopup('birthdate')";><sup><font size=-1
+color=green>note</font></sup><span class="popuptext" id="birthdate">Because Mei-O's friend Linna also has an October 10<sup>th</sup> 
+birthday, we often also celebrate this birthday together with mutual friends.</span></span>
 </a>
 </td>
 </tr>
