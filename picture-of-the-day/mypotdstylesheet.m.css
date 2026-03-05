@@ -1,0 +1,114 @@
+  body {
+    font-family:  "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    /* text-align: center; */
+  }
+
+  /* Header image */
+  header img {
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    display: block; 
+    margin: 0 auto;
+  }
+
+  /* Title and paragraph */
+  main {
+    padding: 20px;
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-size: 2em;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 10px auto 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  /* Thumbnail grid */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);  
+    gap: 20px;
+    max-width: 450px;  
+    margin: 0 auto 50px;
+  }
+
+  .thumb {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .thumb:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .thumb img {
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .thumb p {
+    margin-top: 8px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  a:link {
+  color: blue; /* Sets the default text color */
+  /* text-decoration: none;  Removes the default underline */
+  /* font-family: Arial, sans-serif;  Sets the font */
+  /* font-size: 16px;  Sets the font size */
+  }
+
+  .disabled-link {
+     pointer-events: none;
+     cursor: default; /* Optional: change cursor to indicate it's not clickable */
+	 color: lightgray;
+	 text-decoration: none;
+  }
+  
+  .table-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* one column */
+  }
+
+  .table-header,
+  .table-row {
+    display: contents; /* Makes children participate in the grid layout of the parent */
+  }
+
+  .header-cell,
+  .table-cell {
+    padding: 2px;
+  }
+
+  .header-cell {
+    font-weight: bold;
+	  place-content: center;
+    background-color: #f2f2f2;
+	}
