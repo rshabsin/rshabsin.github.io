@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Year In Photos - 2025</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="../../favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
+<link rel="stylesheet" type="text/css" href="../../mypopup-new.css">
+<link rel="stylesheet" type="text/css" href="../../mypotdstylesheet.m.css">
+  
+<script src="../danaformatimagecontrol.js"></script>    <!-- if we want to force a switch to the a-version with "addEventListener below --> 
+  
+<script language="javascript">
+
+document.onreadystatechange = function ()
+  {  
+  if (document.readyState == "complete") 
+    {  
+    getDataParam();  
+//    document.getElementById("loading").style.display = "none";  // hide the loading gif
+    }  
+  }
+   
+function getDataParam() 
+  {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  day = urlParams.get('day');
+  if (day == null)
+    day = 1;
+  startingDay = count + 1;  // changed adding +1 12/03/25
+	
+  document.location.href = window.location.href.replace(window.location.search,'') + "?day=" + day;
+  }
+
+function videoWindow(windowName, urlLoc, width = 800, height = 600) // implemented 1/16/24 
+  { 
+  newWin(windowName, urlLoc, ((Math.round(window.screen.width / 2)) - (Math.round(width / 2))),
+                             (((Math.round(window.screen.height / 2)) - (Math.round(height / 2)) - 40)), width, height, 1);
+  } 
+
+// needed for popup-new.css
+// <div class="popup" onmouseover="myPopup('myPopupx')" onmouseout="myPopup('myPopupx')";><sup><font size=-1 
+//   color=green>note</font></sup><span class="popuptext" id="myPopupx">popup text</span></div>
+function myPopup(popupid) {
+  var popup = document.getElementById(popupid);
+  popup.classList.toggle("show");
+}
+  
+function showEntry()
+  {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  day = urlParams.get('day');
+  if (day == null)
+    day = 1;
+  document.getElementById("day" + day).style.display = "block";
+ }
+
+document.addEventListener('DOMContentLoaded', function()  // use this to differentiate between desktop and mobile!
+  {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|Mobile|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))  // if mobile
+    {
+    document.getElementById("header").style.display = "none";
+    document.getElementById("comment").style.display = "none";
+	}
+  else
+    document.getElementById("pagemenumobile").style="display: none";
+  }, false);
+  
+</script>
+
+<style>
+
+  .thumb {     /* I need this .thumb with the display: none; here to overwrite the .thumb in mypotdstylesheet.m.css  */
+	           /* to implement the "only showing the current entry" format starting in 2026 - 12/30/25               */
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+</style>
+
+</head>
+
+<body onload = "showEntry()";>
+  <center><div class="table-container">
+    <div class="table-row">
+	  <div class="table-cell"><center><span class="header"><img id="header" src="images/20251229-snow8-header1.jpg"><br>
+	  <a id="comment" name="#">December 29, 2025 - Cleaning up after a heavy snowstorm.</a><br><br></span></center>
+      </div>
+	</div>
+  </div></center>
+
+<script language="javascript">
+</script>
+
+    <section class="gallery">
+	  <span id="pagemenumobile"><center><font size=+3>A Year In Photos<br>Alternates</font><br></center></span>
+
+	  <div id="jpgs"> <!-- fixes a spacing problem -->
+	  
+      <a name="day3"><div class = "thumb" onclick="thumbnailClick(3)" id="day3"><img src="images/20260116-zhiweistext1.jpg">
+      Thursday, January 15 - I got this on Facebook Messenger today. After <a href="images/20260116-zhiweistext2.jpg">replying</a> to 志緯 (David Lo, 
+	  Mei-O's nephew), we planned a video chat with him and his dad, Mei-O's brother 銘期, for the following day. Mei-O then called her sister 
+	  Mei-yu in Sacramento and passed the news on to her.<br><br>
+	  Here's a picture of 志緯's mom <a href="images/20170707-saosao1.jpg">林金珠</a><div class="popup" onmouseover="myPopup('jan15-1')" 
+	  onmouseout="myPopup('jan15-1')";><sup><font size=-1 color=green>note</font></sup><span class="popuptext" id="jan15-1">金珠 didn't like her 
+	  given name, she thought it was too 土, so she went by the nickname 佳静 by which we all knew her.</span></div> from 2017 and a picture of 
+	  his younger brother <a href="images/20150407-zhicheng1.jpg">志承</a> from 2015. This got us thinking about a trip to Taiwan to visit 銘期.... 
+	  [<a href="#" onclick="history.back(); return false;">return</a>]   test
+      </div></a>
+      </div>
+    </section>
+
+  <script>
+    // Optional JavaScript: click to view image in full size
+    const images = document.querySelectorAll('.gallery img');
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        window.open(img.src, '_top');
+      });
+    });
+  </script>
+
+</body>
+</html>
