@@ -3,8 +3,25 @@
 <head>
 <title>Rochester Taiji Practitioners' Music</title>
 <link rel="stylesheet" href="../rsstyles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="../favicon4.ico"> <!-- icons are 16x16. favicon.ico creator at favicon.cc -->
 </head>
+
+<script src="../danaformatimagecontrol.js"></script>    <!-- if we want to force a switch to the .m version with "addEventListener" below -->
+
+<script src="../myPopup.js"></script> <!-- newly added! -->
+<script src="../myImageWindow.js"></script> <!-- newly added! -->
+
+<script language="javascript">
+
+document.addEventListener('DOMContentLoaded', function()  // use this to differentiate between desktop and mobile!
+  {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|Mobile|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent))
+    {
+    document.getElementById("header").style.display = "none"; 
+	}	 
+  }, false);
+</script>
 
 <body onload="disableAutoplay()"> 
 
@@ -14,13 +31,13 @@
       <table align=center>
       <tr>
       <td>
-      <br><img src="images/taijiclass-header1.jpg"><br><br>
+      <div id="header"><br><img src="images/taijiclass-header1.jpg"><br><br></div>
       <h1 align=center>Rochester Taiji Practitioners' Music</h1>
       
       <table align=center>
       <tr>
         <td>
-        <fieldset style="zoom:220%">
+        <!-- fieldset style="zoom:220%" -->
         <legend>Forms Music</legend>
         
         <b>Combined 24/40/42 (17:53)</b><br>
@@ -92,7 +109,7 @@
           } 
         </script>
         <!-- end of audio player code -->
-        </fieldset>
+        <!-- /fieldset -->
         </td>
       </tr>
       </table>
