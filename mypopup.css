@@ -1,0 +1,32 @@
+
+/* 
+Pop-up text on hover. Usage:
+<u><a class=\"popup\" href=\"#\" onclick=\"return false;\">Hover over me<span><nobr>This is a test.</nobr></span></a></u>
+<u><a class="popup" href="#" onclick="return false;">Hover over me<span><nobr>This is a test.</nobr></span></a></u>
+*/
+
+.popup {
+    zoom:1.0;
+    position:relative;
+    text-decoration:none;
+    cursor: default;  
+    color: #228b22; /* color of the underlined text */
+}
+.popup span {
+    color:black;
+    background-color:#f5f5f5;
+    position:absolute;  /* was "fixed" */
+/*	top:220px; */ /* positions y-axis */
+/*	left:500px;  */
+/*	width:350px; */
+    padding:10px;
+    border-radius:10px;
+    border-style: dotted;
+    left:-999em; 
+    z-index:990;  
+    text-align: left;  /* keeps text from being centered */	
+}
+.popup:hover {visibility:visible}
+.popup:hover span {left:0px; bottom:0px}  /* positions it. was top:0px, changed 10/30/25 */
+* html .popup span {position:absolute;}
+
