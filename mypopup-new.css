@@ -30,7 +30,7 @@ Usage:
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -80px;
+  margin-left: -80px;  /*-80 in center, -180 moves it to the left, -10 moves it to the right */
 }
 
 /* Popup arrow */
@@ -38,7 +38,61 @@ Usage:
   content: "";
   position: absolute;
   top: 100%;
+  left: 50%;  /* 50% for center, 90% for left, 10% for right */
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .popuptextl { /* added 7/27/26 to pop up the text to the left of the cursor position */
+  visibility: hidden;
+  width: 180px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
   left: 50%;
+  margin-left: -180px;  /*-80 in center, -180 moves it to the left, -10 moves it to the right */
+}
+
+/* Popup arrow */
+.popup .popuptextl::after { /* added 7/27/26 to pop up the text to the left of the cursor position */
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 90%;  /* 50% for center, 90% for left, 10% for right */
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .popuptextr { /* added 7/27/26 to pop up the text to the right of the cursor position */
+  visibility: hidden;
+  width: 180px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -10px;  /*-80 in center, -180 moves it to the left, -10 moves it to the right */
+}
+
+/* Popup arrow */
+.popup .popuptextr::after { /* added 7/27/26 to pop up the text to the right of the cursor position */
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;  /* 50% for center, 90% for left, 10% for right */
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
