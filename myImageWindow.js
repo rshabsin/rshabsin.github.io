@@ -26,3 +26,9 @@ function videoWindow(windowName, urlLoc, width = 800, height = 600) // some page
   newWin(windowName, urlLoc, ((Math.round(window.screen.width / 2)) - (Math.round(width / 2))),
                              (((Math.round(window.screen.height / 2)) - (Math.round(height / 2)) - 40)), width, height, 1);
   } 
+
+function textWindow(windowName, urlLoc, width = 800, height = 600) // some pages used this instead of image window
+  { 
+  newWin(windowName, urlLoc, ((Math.round(window.screen.width / 2)) - (Math.round(width / 2))),
+                             (((Math.round(window.screen.height / 2)) - (Math.round(height / 2)) - 40)), width, height, 1);
+  } 
